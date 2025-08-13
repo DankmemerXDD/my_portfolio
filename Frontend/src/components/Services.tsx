@@ -22,7 +22,7 @@ export function Services() {
       <div className="mx-auto max-w-6xl px-6">
         <header className="mb-10">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">What I Do</h2>
-          <p className="mt-2 text-white/70">Ways I can help your product succeed.</p>
+          <p className="mt-2 text-white/70">Ways I can help your product succeed</p>
         </header>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((it) => (

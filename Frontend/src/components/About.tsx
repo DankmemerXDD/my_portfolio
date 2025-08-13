@@ -12,7 +12,7 @@ export function About() {
           </p>
           <p>
             My toolkit includes React, TypeScript, Vite, and Tailwind. I focus on readable code, testing discipline,
-            and design informed by real user feedback. See my PDF/CV for more background.
+            and design informed by real user feedback.
           </p>
           <p>
             Let’s build something great.

@@ -1,18 +1,21 @@
+import { useI18n } from '../i18n/I18nProvider'
+
 export function Services() {
+  const { t } = useI18n()
   const items = [
     {
-      title: 'Frontend Engineering',
-      desc: 'Accessible, performant UI with React, TypeScript, and Tailwind.',
+      title: t('services.frontend.title'),
+      desc: t('services.frontend.desc'),
       icon: '⚡',
     },
     {
-      title: 'Architecture & DX',
-      desc: 'Clean code, testing, tooling, and CI to keep teams moving fast.',
+      title: t('services.arch.title'),
+      desc: t('services.arch.desc'),
       icon: '🧭',
     },
     {
-      title: 'Performance & UX',
-      desc: 'Ship fast sites with great UX and Core Web Vitals.',
+      title: t('services.ux.title'),
+      desc: t('services.ux.desc'),
       icon: '🚀',
     },
   ]
@@ -21,8 +24,8 @@ export function Services() {
     <section id="services" className="bg-gray-950 py-20 text-white">
       <div className="mx-auto max-w-6xl px-6">
         <header className="mb-10">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">What I Do</h2>
-          <p className="mt-2 text-white/70">Ways I can help your product succeed</p>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">{t('services.title')}</h2>
+          <p className="mt-2 text-white/70">{t('services.subtitle')}</p>
         </header>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((it) => (

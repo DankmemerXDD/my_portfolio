@@ -26,6 +26,18 @@ export const en: Messages = {
 
   'projects.title': 'Projects',
   'projects.subtitle': 'A selection of things I’ve built recently.',
+  'projects.tabs.chef': 'Chef',
+  'projects.tabs.vfx': 'VFX',
+  'projects.tabs.cs': 'Computer Science',
+  'projects.chef.subtitle': 'Highlights from my time as a chef.',
+  'projects.vfx.subtitle': 'My VFX showreel and visual work.',
+  'projects.cs.subtitle': 'Software projects I’ve built; click to see details.',
+
+  'projects.more': 'More info',
+  'projects.less': 'Less',
+  'projects.demo': 'Live Demo',
+  'projects.source': 'Source Code',
+  'projects.openVimeo': 'Open on Vimeo',
 
   'services.title': 'What I Do',
   'services.subtitle': 'Ways I can help your product succeed.',
@@ -63,6 +75,18 @@ export const no: Messages = {
 
   'projects.title': 'Prosjekter',
   'projects.subtitle': 'Et utvalg av ting jeg har bygget i det siste.',
+  'projects.tabs.chef': 'Kokk',
+  'projects.tabs.vfx': 'VFX',
+  'projects.tabs.cs': 'Informatikk',
+  'projects.chef.subtitle': 'Høydepunkter fra tiden som kokk.',
+  'projects.vfx.subtitle': 'VFX‑showreel og visuelt arbeid.',
+  'projects.cs.subtitle': 'Programvareprosjekter jeg har bygget; klikk for detaljer.',
+
+  'projects.more': 'Mer info',
+  'projects.less': 'Mindre',
+  'projects.demo': 'Live demo',
+  'projects.source': 'Kildekode',
+  'projects.openVimeo': 'Åpne på Vimeo',
 
   'services.title': 'Dette gjør jeg',
   'services.subtitle': 'Slik kan jeg hjelpe produktet ditt å lykkes.',

@@ -1,7 +1,7 @@
 import { Navbar } from '../components/Navbar'
 import { Hero } from '../components/Hero'
 import { About } from '../components/About'
-import { Projects } from '../components/Projects'
+import { ProjectsTabs } from '../components/ProjectsTabs'
 import { Services } from '../components/Services'
 import { Footer } from '../components/Footer'
 import { I18nProvider } from '../i18n/I18nProvider'
@@ -14,7 +14,7 @@ export default function Layout() {
         <main>
           <Hero />
           <About />
-          <Projects />
+          <ProjectsTabs />
           <Services />
         </main>
         <Footer />

@@ -1,11 +1,15 @@
 import type { Project } from '../data/projects'
+import { useState } from 'react'
+import { useI18n } from '../i18n/I18nProvider'
 
 interface ProjectCardProps {
   project: Project
 }
 
 export function ProjectCard({ project }: ProjectCardProps) {
+  const { t } = useI18n()
   const { title, description, tags, image, demoUrl, repoUrl } = project
+  const [open, setOpen] = useState(false)
   return (
     <article className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-4 shadow-lg backdrop-blur-sm transition hover:translate-y-[-2px] hover:shadow-xl">
       {image && (
@@ -19,7 +23,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
         </div>
       )}
       <h3 className="text-lg font-semibold text-white">{title}</h3>
-      <p className="mt-2 text-sm text-white/80">{description}</p>
+      <p className="mt-2 text-sm text-white/80 line-clamp-3">{description}</p>
       <ul className="mt-3 flex flex-wrap gap-2">
         {tags.map((tag) => (
           <li key={tag} className="rounded-full bg-white/10 px-2 py-1 text-xs text-white/80">
@@ -27,28 +31,37 @@ export function ProjectCard({ project }: ProjectCardProps) {
           </li>
         ))}
       </ul>
-      {(demoUrl || repoUrl) && (
-        <div className="mt-4 flex gap-3">
-          {demoUrl && (
-            <a
-              href={demoUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center justify-center rounded-lg bg-indigo-500 px-3 py-1.5 text-sm font-medium text-white transition hover:bg-indigo-400"
-            >
-              Live Demo
-            </a>
-          )}
-          {repoUrl && (
-            <a
-              href={repoUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center justify-center rounded-lg border border-white/20 bg-white/0 px-3 py-1.5 text-sm font-medium text-white transition hover:bg-white/10"
-            >
-              Source Code
-            </a>
-          )}
+      <div className="mt-4 flex flex-wrap items-center gap-3">
+        {demoUrl && (
+          <a
+            href={demoUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center justify-center rounded-lg bg-indigo-500 px-3 py-1.5 text-sm font-medium text-white transition hover:bg-indigo-400"
+          >
+            {t('projects.demo')}
+          </a>
+        )}
+        {repoUrl && (
+          <a
+            href={repoUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center justify-center rounded-lg border border-white/20 bg-white/0 px-3 py-1.5 text-sm font-medium text-white transition hover:bg-white/10"
+          >
+            {t('projects.source')}
+          </a>
+        )}
+        <button
+          className="ml-auto rounded-lg border border-white/20 bg-white/0 px-3 py-1.5 text-sm font-medium text-white transition hover:bg-white/10"
+          onClick={() => setOpen((v) => !v)}
+        >
+          {open ? t('projects.less') : t('projects.more')}
+        </button>
+      </div>
+      {open && (
+        <div className="mt-3 rounded-lg border border-white/10 bg-white/5 p-3 text-sm text-white/80">
+          {description}
         </div>
       )}
     </article>

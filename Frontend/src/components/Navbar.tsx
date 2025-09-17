@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useI18n } from '../i18n/I18nProvider'
+import { motion } from 'framer-motion'
 
 export function Navbar() {
   const [open, setOpen] = useState(false)
@@ -49,9 +50,16 @@ export function Navbar() {
           <ul className="mx-auto max-w-6xl px-6 py-2">
             {links.map((l) => (
               <li key={l.href} className="py-2">
-                <a href={l.href} className="block text-sm text-white/80" onClick={() => setOpen(false)}>
+                <motion.a
+                  href={l.href}
+                  className="block text-sm text-white/80"
+                  onClick={() => setOpen(false)}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ type: 'spring', stiffness: 300 }}
+                >
                   {l.label}
-                </a>
+                </motion.a>
               </li>
             ))}
           </ul>

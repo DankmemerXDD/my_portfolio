@@ -1,6 +1,7 @@
 import type { Project } from '../data/projects'
 import { useState } from 'react'
 import { useI18n } from '../i18n/I18nProvider'
+import { motion } from 'framer-motion'
 
 interface ProjectCardProps {
   project: Project
@@ -11,7 +12,12 @@ export function ProjectCard({ project }: ProjectCardProps) {
   const { title, description, tags, image, demoUrl, repoUrl } = project
   const [open, setOpen] = useState(false)
   return (
-    <article className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-4 shadow-lg backdrop-blur-sm transition hover:translate-y-[-2px] hover:shadow-xl">
+    <motion.article
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
+      transition={{ type: 'spring', stiffness: 200 }}
+      className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-4 shadow-lg backdrop-blur-sm"
+    >
       {image && (
         <div className="mb-3 aspect-video overflow-hidden rounded-xl bg-black/20">
           <img
@@ -64,6 +70,6 @@ export function ProjectCard({ project }: ProjectCardProps) {
           {description}
         </div>
       )}
-    </article>
+    </motion.article>
   )
 }

@@ -56,10 +56,20 @@ export function ProjectsTabs() {
         {tab === 'vfx' && (
           <div>
             <p className="mb-6 text-white/70">{t('projects.vfx.subtitle')}</p>
-            <VimeoEmbed videoUrl="https://tinyurl.com/KimShowreel" />
+            <VimeoEmbed videoUrl="https://vimeo.com/709398946?cjdata=MXxZfDB8WXww&turnstile=0.
+                                  FzDRMCgc0O46kVuUnmtZAHuxa4XStwhBLLCaq924WWsJSiYqb5WQODcmgw1YrsljRfFl0ZU-h8cjDWsYmHW2
+                                  KBiS18Mj8IWA61LY6COQEOnvmcsAzddaBMRQQuxd4uJjQUVbaMgJL7QKkAezVA-xaToplKBo5QoDUbCRc4516BNZe89uXZzrAc1zsbaLut7d
+                                  VwTZDpJkskEFAUDSVwXfS36UfRv-wHlPdgWq3drPmcjHv7MkSDyx9GwTNuMUpkfqJ0ETItyzNb-T-5IKbwPdY3gJMguM_pOqlyKNeXV2leuq
+                                  Q9qegzz8jKIZGTQ14ZQLTwEC35rexHhdtF7x_nwgDKS4ao0z2PQxfsUl2ZHW43gGeVpalb--D26Q0YarT9vdx74U8v6pfIwxs5ULT4ykE5fJ
+                                  3kAELBAait2oMVO89fde9ARK_ZVVZIz_bE1O_J_oDgR5GoP5Adi2adlSj5WRKn7FbIElLL1rvF7ULbxEu3j3jtVG9F4tH1lE8eOm5cp3GJl7
+                                  t-vAkDw_BtSqwz9f_RjU9-b3RJxMEuG63_d6noKTbVl-OdW1QoN40JjQi17yhEjYlIEghfBxWowRq0iPg2w9GEGsfyyr4dqgNLP61_ygi027
+                                  b_u6qxcN6CX3EwCQVnyWXeQ1C6nuS6z8xxRJBHdseYsyhE91kVHWlm_YDLDFJgIcnWfY8v1LVItNTacT6PiLI1yQbBdJNlixtZOwDHtv9JKL
+                                  H4B27BnJlg8OLKgs2GJ-TwZdLsxwB2KstU0Vdq0Ta4p746VZLMAFpIhXEy1zYEOUTv5W8cUjRqqH4eh8_UW6aqKoxWWpCbxu4YmF_M3Nx9CB
+                                  q__0ME57bZp79wssTcS76yyrR8RVjPqnW7vM2PUOXW4p1ExjRhdVAGffNviYrmO7oXoKdqP1HaAd2w.A7sjA2GVao1QSjUj898KqA.fcda2a
+                                  457c2c37325edd56117105ffcbd057d7eb88fb18b5b71798a2790fe46f&utm_campaign=2917105&utm_source=affiliate&utm_cha
+                                  nnel=affiliate&cjevent=fda469b6946b11f082c6003e0a18b8fa&clickid=fda469b6946b11f082c6003e0a18b8fa" />
           </div>
         )}
-
         {tab === 'cs' && (
           <div>
             <p className="mb-6 text-white/70">{t('projects.cs.subtitle')}</p>

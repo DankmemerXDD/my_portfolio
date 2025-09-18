@@ -18,10 +18,10 @@ export const en: Messages = {
   'hero.ctaAbout': 'About Me',
 
   'about.title': 'About Me',
-  'about.p1': 'I’m Kim Salihu, a frontend-leaning developer who enjoys turning complex ideas into fast, accessible experiences. I care about clean architecture, strong typing, and excellent developer experience.',
-  'about.p2': 'My toolkit includes React, TypeScript, Vite, and Tailwind. I focus on readable code, testing discipline, and design informed by real user feedback. See my PDF/CV for more background.',
+  'about.p1': 'I’m Kim Salihu, a graduate developer who enjoys turning complex ideas into fast, accessible experiences. I care about clean architecture, strong typing, and excellent developer experience.',
+  'about.p2': 'My toolkit includes React, TypeScript, Vite, and Tailwind. I focus on readable code, testing discipline, and design informed by user feedback.',
   'about.p3': 'Let’s build something great.',
-  'about.degrees': 'I hold a Bachelor in Computer Science and a Bachelor in VFX.',
+  'about.degrees': 'I hold a Bachelor degree in Computer Science and in VFX.',
   'about.showreel': 'Watch my VFX showreel',
 
   'projects.title': 'Projects',
@@ -30,7 +30,7 @@ export const en: Messages = {
   'projects.tabs.vfx': 'VFX',
   'projects.tabs.cs': 'Computer Science',
   'projects.chef.subtitle': 'Highlights from my time as a chef.',
-  'projects.vfx.subtitle': 'My VFX showreel and visual work.',
+  'projects.vfx.subtitle': 'My VFX showreel and visual work from when i was studying at school.',
   'projects.cs.subtitle': 'Software projects I’ve built; click to see details.',
 
   'projects.more': 'More info',
@@ -70,7 +70,7 @@ export const no: Messages = {
   'about.p1': 'Jeg er Kim Salihu, en utvikler med fokus på frontend som liker å gjøre komplekse ideer om til raske, tilgjengelige opplevelser. Jeg er opptatt av ren arkitektur, sterk typing og god utvikleropplevelse.',
   'about.p2': 'Jeg bruker blant annet React, TypeScript, Vite og Tailwind. Jeg prioriterer lesbar kode, gode testvaner og et design som er basert på reelle tilbakemeldinger fra brukere. Se CV/PDF for mer bakgrunn.',
   'about.p3': 'La oss bygge noe bra.',
-  'about.degrees': 'Jeg har bachelor i informatikk og en bachelor i VFX.',
+  'about.degrees': 'Jeg har bachelor i informatikk og i VFX.',
   'about.showreel': 'Se VFX‑showreelen min',
 
   'projects.title': 'Prosjekter',

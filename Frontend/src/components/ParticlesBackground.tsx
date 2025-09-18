@@ -5,7 +5,7 @@ import { loadSlim } from "@tsparticles/slim"
 import { initParticlesEngine } from "@tsparticles/react"
 
 type ParticlesBackgroundProps = {
-  type?: "meteors" | "stars" | "bubbles"
+  type?: "meteors" | "bubbles"
 }
 
 export function ParticlesBackground({ type = "meteors" }: ParticlesBackgroundProps) {
@@ -19,20 +19,6 @@ export function ParticlesBackground({ type = "meteors" }: ParticlesBackgroundPro
 
   const options: RecursivePartial<IOptions> = useMemo(() => {
     switch (type) {
-      case "stars":
-        return {
-          background: { color: "transparent" },
-          fullScreen: { enable: false },
-          particles: {
-            number: { value: 200 },
-            move: { enable: true, speed: 0.25 },
-            shape: { type: "circle" },
-            size: { value: 2 },
-            opacity: { value: 0.7 },
-            color: { value: "#ffffff" },
-          },
-          detectRetina: true,
-        }
       case "bubbles":
         return {
           background: { color: "transparent" },

@@ -1,4 +1,4 @@
-import { createContext, useContext, useMemo, useState } from 'react'
+import { createContext, useContext, useMemo, useState, useEffect } from 'react'
 import type { ReactNode } from 'react'
 import type { Language, Messages } from './messages'
 import { en as enMessages, no as noMessages } from './messages'
@@ -13,7 +13,14 @@ type I18nContextType = {
 const I18nContext = createContext<I18nContextType | null>(null)
 
 export function I18nProvider({ children }: { children: ReactNode }) {
-  const [lang, setLang] = useState<Language>('en')
+  const [lang, setLang] = useState<Language>(() => {
+    const saved = localStorage.getItem('lang')
+    return saved === 'en' || saved === 'no' ? saved : 'en'
+  })
+
+  useEffect(() => {
+    localStorage.setItem('lang', lang)
+  }, [lang])
 
   const messages = useMemo(() => (lang === 'en' ? enMessages : noMessages), [lang])
   const t = (key: string) => messages[key] ?? key

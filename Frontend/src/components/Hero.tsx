@@ -1,15 +1,14 @@
 import { useI18n } from '../i18n/I18nProvider'
 import { motion } from 'framer-motion'
-import { ParticlesBackground } from './ParticlesBackground' // 👈 viktig import
+import { ParticlesBackground } from './ParticlesBackground'
 
 export function Hero() {
   const { t } = useI18n()
   return (
     <section
       id="hero"
-      className="relative isolate overflow-hidden bg-gradient-to-b from-gray-950 via-gray-900 to-gray-900 py-24 text-white"
+      className="relative isolate overflow-hidden bg-gray-950 py-24 text-white"
     >
-      {/* Bakgrunn med meteorer */}
       <ParticlesBackground type="meteors" />
 
       <div className="mx-auto max-w-6xl px-6 relative z-10">
@@ -45,17 +44,30 @@ export function Hero() {
             className="mt-8 flex items-center justify-center gap-4"
           >
             <a
+              href="#about"
+              className="rounded-lg border border-white/20 bg-indigo-950 px-5 py-3 text-sm font-medium text-white transition hover:bg-indigo-800"
+            >
+              {t('hero.ctaAbout')}
+            </a>
+            <a
               href="#projects"
-              className="rounded-lg bg-indigo-500 px-5 py-3 text-sm font-medium text-white transition hover:bg-indigo-400"
+              className="rounded-lg border border-white/20 bg-transparent px-5 py-3 text-sm font-medium text-white transition hover:bg-white/10"
             >
               {t('hero.ctaProjects')}
             </a>
             <a
-              href="#about"
+              href="#services"
               className="rounded-lg border border-white/20 bg-transparent px-5 py-3 text-sm font-medium text-white transition hover:bg-white/10"
             >
-              {t('hero.ctaAbout')}
+              {t('nav.services')}
             </a>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 1 }}
+            className="mt-8 flex items-center justify-center gap-4"
+          >
           </motion.div>
         </div>
       </div>

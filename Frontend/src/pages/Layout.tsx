@@ -13,8 +13,10 @@ export default function Layout() {
         <Navbar />
         <main>
           <Hero />
+          <div className="h-35 bg-gradient-to-b from-gray-950 to-gray-900"></div>
           <About />
           <ProjectsTabs />
+          <div className="h-35 bg-gradient-to-b from-gray-900 to-gray-950"></div>
           <Services />
         </main>
         <Footer />
